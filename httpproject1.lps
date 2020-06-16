@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="httpproject1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="16"/>
+        <CursorPos X="20" Y="44"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/uassets.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FPWebModuleAssets"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="uAssets"/>
+        <TopLine Value="84"/>
+        <CursorPos X="88" Y="44"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/other/ucustomexception.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uCustomException"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos X="48" Y="36"/>
+        <UsageCount Value="22"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/other/ucustomgetmodule.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uCustomGetModule"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5"/>
+        <CursorPos X="37" Y="38"/>
+        <UsageCount Value="22"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/uindex.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FPWebModuleIndex"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="uIndex"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="41"/>
+        <CursorPos X="128" Y="73"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/ulogin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FPWebModuleLogin"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="uLogin"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="56"/>
+        <CursorPos X="5" Y="88"/>
+        <UsageCount Value="22"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/other/jwt_unit/ngit_crypto_jwt.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="22"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/other/uverifiedjwt.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uVerifiedJWT"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="31"/>
+        <CursorPos X="99" Y="39"/>
+        <UsageCount Value="21"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/uprofile.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FPWebModuleProfile"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="uProfile"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="41"/>
+        <CursorPos X="126" Y="73"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/utable.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FPWebModuleTable"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="uTable"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="41"/>
+        <CursorPos X="128" Y="73"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/uregister.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FPWebModuleRegister"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="uRegister"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="42"/>
+        <CursorPos X="109" Y="59"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/fpcupdeluxe/installazioni/20200302/fpcsrc/rtl/objpas/sysutils/sysstrh.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="54" Y="28"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/other/uprofile.pas"/>
+        <ComponentName Value="FPWebModuleProfile"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="uProfile"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="30" Y="26"/>
+        <UsageCount Value="20"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="13">
+      <Position>
+        <Filename Value="src/uassets.pas"/>
+        <Caret Line="10" Column="22"/>
+      </Position>
+      <Position>
+        <Filename Value="src/uindex.pas"/>
+        <Caret Line="18" Column="24"/>
+      </Position>
+      <Position>
+        <Filename Value="src/uindex.pas"/>
+        <Caret Line="36" Column="107" TopLine="5"/>
+      </Position>
+      <Position>
+        <Filename Value="src/uindex.pas"/>
+        <Caret Line="63" Column="35" TopLine="33"/>
+      </Position>
+      <Position>
+        <Filename Value="src/uindex.pas"/>
+        <Caret Line="63" Column="11" TopLine="33"/>
+      </Position>
+      <Position>
+        <Filename Value="src/uindex.pas"/>
+        <Caret Line="18" Column="73" TopLine="9"/>
+      </Position>
+      <Position>
+        <Filename Value="src/uprofile.pas"/>
+        <Caret Line="21" Column="40"/>
+      </Position>
+      <Position>
+        <Filename Value="src/uprofile.pas"/>
+        <Caret Line="18" Column="71" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="src/utable.pas"/>
+        <Caret Line="26" Column="76"/>
+      </Position>
+      <Position>
+        <Filename Value="src/utable.pas"/>
+        <Caret Line="18" Column="70" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="src/utable.pas"/>
+        <Caret Line="56" Column="66" TopLine="41"/>
+      </Position>
+      <Position>
+        <Filename Value="src/uregister.pas"/>
+        <Caret Line="2" Column="15"/>
+      </Position>
+      <Position>
+        <Filename Value="src/uregister.pas"/>
+        <Caret Line="18" Column="72" TopLine="6"/>
+      </Position>
+      <Position>
+        <Filename Value="httpproject1.lpr"/>
+        <Caret Line="34" Column="36"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

@@ -1,0 +1,15 @@
+object FPWebModuleAssets: TFPWebModuleAssets
+  OldCreateOrder = False
+  Actions = <  
+    item
+      Name = 'get_file'
+      Default = True
+      OnRequest = get_fileRequest
+      Template.AllowTagParams = False
+    end>
+  CreateSession = False
+  Height = 150
+  HorizontalOffset = 707
+  VerticalOffset = 353
+  Width = 150
+end
