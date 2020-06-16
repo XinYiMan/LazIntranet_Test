@@ -25,7 +25,7 @@ var
 
 implementation
 uses
-    NGIT_Crypto_JWT, uVerifiedJWT;
+    NGIT_Crypto_JWT, uVerifiedJWT, uGetToken;
 
 {$R *.lfm}
 
@@ -38,9 +38,7 @@ var
    valid_token        : boolean;
 begin
      valid_token        := false;
-     mytoken            := ARequest.QueryFields.Values['mytoken'];
-     if trim(mytoken) = '' then
-        mytoken            := ARequest.ContentFields.Values['mytoken'];
+     mytoken            := GetToken(aRequest);
 
      if trim(mytoken)='' then
      begin
@@ -70,7 +68,7 @@ end;
 
 procedure TFPWebModuleTable.OnBodyLoad(AResponse: TResponse; mytoken: string);
 begin
-     AResponse.Contents.Text := stringReplace(AResponse.Contents.Text, '{*mytoken*}', mytoken, [RfReplaceAll, rfIgnoreCase]);
+     SetToken(AResponse, mytoken);
 end;
 
 initialization

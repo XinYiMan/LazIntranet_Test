@@ -25,7 +25,7 @@ var
 
 implementation
 uses
-    NGIT_Crypto_JWT, uVerifiedJWT;
+    NGIT_Crypto_JWT, uVerifiedJWT, uGetToken;
 
 {$R *.lfm}
 
@@ -41,7 +41,7 @@ var
    id_user            : integer;
 begin
      valid_token        := false;
-     mytoken            := ARequest.ContentFields.Values['mytoken'];
+     mytoken            := GetToken(aRequest);
 
      if trim(mytoken)='' then
      begin
@@ -68,7 +68,9 @@ begin
               id_user := ValidLogin(user, pwd);
               if id_user>0 then
               begin
-                 AResponse.SendRedirect('index?mytoken=' + GenerateJWT(id_user, user));
+                   mytoken := GenerateJWT(id_user, user);
+                   SetToken(AResponse, mytoken);
+                   AResponse.SendRedirect('index');
               end
               else
               begin

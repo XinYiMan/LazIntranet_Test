@@ -7,7 +7,7 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   fpwebfile, HTTPDefs, SysUtils, fphttp, fphttpapp, uAssets, uCustomException,
-  uCustomGetModule, uIndex, uLogin, uProfile, uTable, uRegister
+  uCustomGetModule, uIndex, uLogin, uProfile, uTable, uRegister, uLogOut
   {$ifdef ActiveSSL}
   ,opensslsockets
   {$endif}
@@ -37,6 +37,8 @@ begin
   RegisterHTTPModule('table.html', TFPWebModuleTable);
   RegisterHTTPModule('register', TFPWebModuleRegister);
   RegisterHTTPModule('register.html', TFPWebModuleRegister);
+  RegisterHTTPModule('logout', TFPWebModuleLogOut);
+  RegisterHTTPModule('logout.html', TFPWebModuleLogOut);
 
   Application.OnShowRequestException := @MyShowRequestException;
   Application.OnException            := @MyCustomException.MyException;

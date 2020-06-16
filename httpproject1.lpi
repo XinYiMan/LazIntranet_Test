@@ -102,6 +102,18 @@
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="uRegister"/>
       </Unit>
+      <Unit>
+        <Filename Value="src/other/ugettoken.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uGetToken"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/ulogout.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FPWebModuleLogOut"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="uLogOut"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -116,7 +128,7 @@
     </SearchPaths>
     <Other>
       <CustomOptions Value="-dUseCThreads
--dActiveSSL"/>
+//-dActiveSSL"/>
     </Other>
   </CompilerOptions>
   <Debugging>
