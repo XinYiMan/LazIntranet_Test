@@ -7,10 +7,9 @@
       <Unit>
         <Filename Value="httpproject1.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <TopLine Value="13"/>
-        <CursorPos X="59" Y="153"/>
+        <CursorPos X="108" Y="30"/>
         <UsageCount Value="27"/>
         <Loaded Value="True"/>
       </Unit>
@@ -38,8 +37,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="uIndex"/>
-        <TopLine Value="82"/>
-        <CursorPos X="75" Y="115"/>
+        <TopLine Value="85"/>
+        <CursorPos X="75" Y="120"/>
         <UsageCount Value="27"/>
         <Loaded Value="True"/>
       </Unit>
@@ -132,9 +131,11 @@
         <ComponentName Value="FPWebModuleFavIcon"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="uFavIcon"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="22" Y="35"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="25" Y="49"/>
         <UsageCount Value="21"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="src/uassets.pas"/>

@@ -27,7 +27,9 @@ begin
 
                 //writeln('**' + AResponse.Request.URI);
 
-                myfile   := TFileStream.Create(filename, fmOpenRead + fmShareDenyWrite);
+                myfile          := TFileStream.Create(filename, fmOpenRead + fmShareDenyWrite);
+                myfile.Position := 0;
+
                 AResponse.ContentStream := myfile;
 
                 case lowercase(ExtractFileExt(filename)) of
@@ -105,7 +107,11 @@ begin
 
                 end;
 
+                AResponse.SendContent;
                 Handled := true;
+
+                myfile.Free;
+                myfile := nil;
            end else begin
 
                //writeln('--' + AResponse.Request.URI);
@@ -169,7 +175,7 @@ begin
   else
       writeln('https://localhost:' + IntToStr(Application.Port));
 
-  writeln('ver 4');
+  writeln('ver 6');
 
   Application.Threaded:=True;
   Application.Initialize;
