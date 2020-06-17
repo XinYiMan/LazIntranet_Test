@@ -277,7 +277,7 @@
                                     <div class="col mr-2">
                                         <h6 class="mb-0"><strong>Lunch meeting</strong></h6><span class="text-xs">10:30 AM</span></div>
                                     <div class="col-auto">
-                                        <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="formCheck-1"><label class="custom-control-label" for="formCheck-1"></label></div>
+                                        <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="formCheck-1" value="1"><label class="custom-control-label" for="formCheck-1"></label></div>
                                     </div>
                                 </div>
                             </li>
@@ -286,7 +286,7 @@
                                     <div class="col mr-2">
                                         <h6 class="mb-0"><strong>Lunch meeting</strong></h6><span class="text-xs">11:30 AM</span></div>
                                     <div class="col-auto">
-                                        <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="formCheck-2"><label class="custom-control-label" for="formCheck-2"></label></div>
+                                        <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="formCheck-2" value="2"><label class="custom-control-label" for="formCheck-2"></label></div>
                                     </div>
                                 </div>
                             </li>
@@ -295,7 +295,7 @@
                                     <div class="col mr-2">
                                         <h6 class="mb-0"><strong>Lunch meeting</strong></h6><span class="text-xs">12:30 AM</span></div>
                                     <div class="col-auto">
-                                        <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="formCheck-3"><label class="custom-control-label" for="formCheck-3"></label></div>
+                                        <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="formCheck-3" value="3"><label class="custom-control-label" for="formCheck-3"></label></div>
                                     </div>
                                 </div>
                             </li>
@@ -369,6 +369,41 @@
     <script src="assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
     <script src="assets/js/theme.js"></script>
+
+	<script type="text/javascript">
+
+	 $(document).ready(function(){
+
+		$('.custom-checkbox').on('change', function(e) {
+		    if(document.getElementById(e.target.id).checked) {
+		    	alert(e.target.id + ' check ' + e.target.value);
+		    }else{
+		    	alert(e.target.id + ' uncheck ' + e.target.value);
+		    }
+
+            return $.ajax({
+                type: "POST",
+                url: "/index/set_item_todolist",
+                data: "key=1&value=2",
+                async: false,
+                success: function (result) {
+                    /* if result is a JSon object */
+                    alert(result);
+                    /*if (result.code == 0)
+                        alert('ok ' + code.description);
+                    else
+                        alert('ko ' + code.description);*/
+                }
+            });
+
+
+
+	    });
+
+	 });	
+
+	</script>
+
 </body>
 
 </html>

@@ -37,14 +37,6 @@
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="src/uassets.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="FPWebModuleAssets"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="DataModule"/>
-        <UnitName Value="uAssets"/>
-      </Unit>
-      <Unit>
         <Filename Value="src/other/ucustomexception.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uCustomException"/>
@@ -113,6 +105,13 @@
         <ComponentName Value="FPWebModuleLogOut"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="uLogOut"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/ufavicon.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FPWebModuleFavIcon"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="uFavIcon"/>
       </Unit>
     </Units>
   </ProjectOptions>

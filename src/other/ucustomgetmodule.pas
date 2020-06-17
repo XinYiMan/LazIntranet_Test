@@ -34,6 +34,8 @@ end;
 
 procedure TCustomGetModule.MyGetModule(Sender: TObject; ARequest: TRequest;
   var ModuleClass: TCustomHTTPModuleClass);
+var
+  filename : string;
 begin
      writeln('TCustomGetModule: ' + ARequest.URI);
 end;

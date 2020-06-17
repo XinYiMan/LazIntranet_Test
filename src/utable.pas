@@ -57,6 +57,7 @@ begin
 
      if valid_token then
      begin
+          SetToken(AResponse, mytoken);
           AResponse.Contents.LoadFromFile(ExtractFilePath(ParamStr(0)) + 'HTML' + System.DirectorySeparator + 'table.html');
           OnBodyLoad(AResponse, mytoken);
      end else begin

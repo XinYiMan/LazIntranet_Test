@@ -6,6 +6,12 @@ object FPWebModuleIndex: TFPWebModuleIndex
       Default = True
       OnRequest = indexRequest
       Template.AllowTagParams = False
+    end  
+    item
+      Name = 'set_item_todolist'
+      Default = False
+      OnRequest = set_item_todolistRequest
+      Template.AllowTagParams = False
     end>
   CreateSession = False
   Height = 150
