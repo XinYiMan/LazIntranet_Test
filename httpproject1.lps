@@ -7,28 +7,28 @@
       <Unit>
         <Filename Value="httpproject1.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="13"/>
-        <CursorPos X="108" Y="30"/>
-        <UsageCount Value="27"/>
-        <Loaded Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="199"/>
+        <CursorPos X="25" Y="218"/>
+        <UsageCount Value="41"/>
       </Unit>
       <Unit>
         <Filename Value="src/other/ucustomexception.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uCustomException"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="2"/>
-        <CursorPos X="48" Y="36"/>
-        <UsageCount Value="27"/>
+        <WindowIndex Value="-1"/>
+        <CursorPos X="113" Y="36"/>
+        <UsageCount Value="41"/>
       </Unit>
       <Unit>
         <Filename Value="src/other/ucustomgetmodule.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uCustomGetModule"/>
         <EditorIndex Value="-1"/>
-        <CursorPos X="90" Y="2"/>
-        <UsageCount Value="27"/>
+        <CursorPos X="77" Y="42"/>
+        <UsageCount Value="41"/>
       </Unit>
       <Unit>
         <Filename Value="src/uindex.pas"/>
@@ -37,21 +37,22 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="uIndex"/>
-        <TopLine Value="85"/>
-        <CursorPos X="75" Y="120"/>
-        <UsageCount Value="27"/>
-        <Loaded Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="49"/>
+        <CursorPos X="36" Y="72"/>
+        <UsageCount Value="41"/>
       </Unit>
       <Unit>
         <Filename Value="src/ulogin.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FPWebModuleLogin"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="uLogin"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="37"/>
-        <CursorPos X="63" Y="61"/>
-        <UsageCount Value="27"/>
+        <TopLine Value="89"/>
+        <CursorPos X="45" Y="85"/>
+        <UsageCount Value="41"/>
       </Unit>
       <Unit>
         <Filename Value="src/other/jwt_unit/ngit_crypto_jwt.pas"/>
@@ -60,7 +61,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="41"/>
       </Unit>
       <Unit>
         <Filename Value="src/other/uverifiedjwt.pas"/>
@@ -69,7 +70,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="10"/>
         <CursorPos X="21" Y="58"/>
-        <UsageCount Value="26"/>
+        <UsageCount Value="40"/>
       </Unit>
       <Unit>
         <Filename Value="src/uprofile.pas"/>
@@ -79,9 +80,9 @@
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="uProfile"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="19"/>
-        <CursorPos X="41" Y="60"/>
-        <UsageCount Value="25"/>
+        <TopLine Value="66"/>
+        <CursorPos X="51" Y="102"/>
+        <UsageCount Value="39"/>
       </Unit>
       <Unit>
         <Filename Value="src/utable.pas"/>
@@ -91,9 +92,9 @@
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="uTable"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="19"/>
-        <CursorPos X="47" Y="36"/>
-        <UsageCount Value="25"/>
+        <TopLine Value="117"/>
+        <CursorPos X="58" Y="138"/>
+        <UsageCount Value="39"/>
       </Unit>
       <Unit>
         <Filename Value="src/uregister.pas"/>
@@ -103,17 +104,17 @@
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="uRegister"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="14"/>
-        <CursorPos X="45" Y="28"/>
-        <UsageCount Value="25"/>
+        <TopLine Value="19"/>
+        <CursorPos X="36" Y="60"/>
+        <UsageCount Value="39"/>
       </Unit>
       <Unit>
         <Filename Value="src/other/ugettoken.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uGetToken"/>
         <EditorIndex Value="-1"/>
-        <CursorPos X="19" Y="20"/>
-        <UsageCount Value="25"/>
+        <CursorPos X="58" Y="23"/>
+        <UsageCount Value="39"/>
       </Unit>
       <Unit>
         <Filename Value="src/ulogout.pas"/>
@@ -122,20 +123,73 @@
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="uLogOut"/>
         <EditorIndex Value="-1"/>
-        <CursorPos X="47" Y="21"/>
-        <UsageCount Value="24"/>
+        <CursorPos X="31" Y="38"/>
+        <UsageCount Value="38"/>
       </Unit>
       <Unit>
         <Filename Value="src/ufavicon.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FPWebModuleFavIcon"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="uFavIcon"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
-        <CursorPos X="25" Y="49"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="64" Y="42"/>
+        <UsageCount Value="35"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/other/ucookies.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uCookies"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="14"/>
+        <CursorPos X="14" Y="53"/>
+        <UsageCount Value="34"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/other/uwpsinterpreter.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uWPSInterpreter"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="100" Y="25"/>
+        <UsageCount Value="33"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/other/ungitjsondataset.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uNGITJsonDataSet"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="12" Y="23"/>
+        <UsageCount Value="31"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/other/usmartdebuglog.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uSmartDebugLog"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="40"/>
+        <CursorPos X="31" Y="81"/>
+        <UsageCount Value="30"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/other/db/udbabstract.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uDbAbstract"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="146"/>
+        <CursorPos X="47" Y="165"/>
+        <UsageCount Value="30"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/uguardianendpoint.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="GuardianEndPoint"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="uGuardianEndPoint"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="23"/>
         <UsageCount Value="21"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="src/uassets.pas"/>
@@ -174,8 +228,8 @@
         <Filename Value="/fpcupdeluxe/installazioni/20200302/fpcsrc/packages/fcl-web/src/base/httpdefs.pp"/>
         <UnitName Value="HTTPDefs"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="2039"/>
-        <CursorPos X="3" Y="2041"/>
+        <TopLine Value="218"/>
+        <CursorPos X="77" Y="232"/>
         <UsageCount Value="10"/>
       </Unit>
       <Unit>
@@ -199,17 +253,26 @@
         <CursorPos X="3" Y="125"/>
         <UsageCount Value="10"/>
       </Unit>
+      <Unit>
+        <Filename Value="/fpcupdeluxe/installazioni/20200302/fpcsrc/packages/fcl-web/src/base/custweb.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="187"/>
+        <CursorPos X="23" Y="223"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/fpcupdeluxe/installazioni/20200302/fpcsrc/packages/fcl-base/src/custapp.pp"/>
+        <UnitName Value="CustApp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="338"/>
+        <CursorPos X="45" Y="372"/>
+        <UsageCount Value="10"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="1">
-      <Position>
-        <Filename Value="httpproject1.lpr"/>
-        <Caret Line="10" Column="83"/>
-      </Position>
-      <Position>
-        <Filename Value="src/uindex.pas"/>
-        <Caret Line="132" Column="29" TopLine="77"/>
-      </Position>
-    </JumpHistory>
+    <General>
+      <ActiveWindowIndexAtStart Value="-1"/>
+    </General>
+    <JumpHistory HistoryIndex="-1"/>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>

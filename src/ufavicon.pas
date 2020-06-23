@@ -24,6 +24,8 @@ var
   FPWebModuleFavIcon: TFPWebModuleFavIcon;
 
 implementation
+uses
+    uSmartDebugLog;
 
 {$R *.lfm}
 

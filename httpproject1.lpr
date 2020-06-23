@@ -6,27 +6,36 @@ uses
   {$IFDEF UNIX}{$IFDEF UseCThreads}
   cthreads,
   {$ENDIF}{$ENDIF}
-  fpwebfile, HTTPDefs, SysUtils, Classes, fphttp, fphttpapp, uCustomException,
-  uCustomGetModule, uIndex, uLogin, uProfile, uTable, uRegister, uLogOut, uFavIcon
+  fpwebfile, HTTPDefs, SysUtils, Classes, fphttp,
+  {$IFDEF BuildCGI}
+  fpcgi,
+  {$ELSE}
+  fphttpapp,
+  uGuardianEndPoint,
+  {$ENDIF}
+  uCustomException,
+  uCustomGetModule, uIndex, uLogin, uProfile, uTable, uRegister, uLogOut,
+  uFavIcon, uSmartDebugLog
   {$ifdef ActiveSSL}
   ,opensslsockets
   {$endif}
   ;
+
+const
+     VERSION = '0.94';
 
 procedure MyShowRequestException(AResponse: TResponse; AnException: Exception; var handled: boolean);
 var
   filename : string;
   myfile   : TFileStream;
 begin
+
      try
         try
 
            filename := ExtractFilePath(ParamStr(0)) + 'HTML' + AResponse.Request.URI;
            if FileExists(filename) then
            begin
-
-                //writeln('**' + AResponse.Request.URI);
-
                 myfile          := TFileStream.Create(filename, fmOpenRead + fmShareDenyWrite);
                 myfile.Position := 0;
 
@@ -107,14 +116,18 @@ begin
 
                 end;
 
+
                 AResponse.SendContent;
                 Handled := true;
 
+
                 myfile.Free;
                 myfile := nil;
+
+
            end else begin
 
-               //writeln('--' + AResponse.Request.URI);
+               SmartDebugLog.write('lpr file','',{$I %CURRENTROUTINE%},AResponse.Request.URI + ' ' + AnException.Message);
 
                AResponse.SendRedirect('index');
                Handled            := true;
@@ -129,7 +142,7 @@ begin
            on E: Exception do
            begin
 
-               writeln('Eccezione MyShowRequestException: ' + E.Message);
+               SmartDebugLog.write('lpr file','',{$I %CURRENTROUTINE%},'Eccezione MyShowRequestException: ' + AResponse.Request.URI + ' ' + E.Message);
 
                Handled := false;
 
@@ -159,25 +172,40 @@ begin
   RegisterHTTPModule('logout', TFPWebModuleLogOut);
   RegisterHTTPModule('logout.html', TFPWebModuleLogOut);
 
+  {$IFNDEF BuildCGI}
+  RegisterHTTPModule('guardianendpoint', TGuardianEndPoint);
+  RegisterHTTPModule('guardianendpoint.html', TGuardianEndPoint);
+  {$ENDIF}
+
   Application.OnShowRequestException := @MyShowRequestException;
   Application.OnException            := @MyCustomException.MyException;
   Application.OnGetModule            := @MyCustomGetModule.MyGetModule;
+
   {$ifdef ActiveSSL}
   Application.UseSSL                 := true;
   {$endif}
 
-  Application.Title:='httpproject1';
-  Application.Port:=3035;
-  Application.LegacyRouting := false;
 
+  SmartDebugLog.SetFileOutput('/tmp/debug.log');
+
+  {$IFNDEF BuildCGI}
+  Application.Port:=3035;
   if not Application.UseSSL then
      writeln('http://localhost:' + IntToStr(Application.Port))
   else
       writeln('https://localhost:' + IntToStr(Application.Port));
-
-  writeln('ver 6');
-
+  writeln('Software version: ' + VERSION);
   Application.Threaded:=True;
+  {$ENDIF}
+
+  Application.LegacyRouting := false;
+
+
+
+
+  Application.AllowDefaultModule := true;
+  Application.PreferModuleName   := true;
+
   Application.Initialize;
   Application.Run;
 
@@ -185,5 +213,6 @@ begin
   MyCustomGetModule := nil;
   MyCustomException.Free;
   MyCustomException := nil;
+  writeln('Application terminate');
 end.
 

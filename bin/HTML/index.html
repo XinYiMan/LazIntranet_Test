@@ -369,40 +369,7 @@
     <script src="assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
     <script src="assets/js/theme.js"></script>
-
-	<script type="text/javascript">
-
-	 $(document).ready(function(){
-
-		$('.custom-checkbox').on('change', function(e) {
-		    if(document.getElementById(e.target.id).checked) {
-		    	alert(e.target.id + ' check ' + e.target.value);
-		    }else{
-		    	alert(e.target.id + ' uncheck ' + e.target.value);
-		    }
-
-            return $.ajax({
-                type: "POST",
-                url: "/index/set_item_todolist",
-                data: "key=1&value=2",
-                async: false,
-                success: function (result) {
-                    /* if result is a JSon object */
-                    alert(result);
-                    /*if (result.code == 0)
-                        alert('ok ' + code.description);
-                    else
-                        alert('ko ' + code.description);*/
-                }
-            });
-
-
-
-	    });
-
-	 });	
-
-	</script>
+    <script src="js/index.js"></script>
 
 </body>
 

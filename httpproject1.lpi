@@ -58,6 +58,7 @@
         <Filename Value="src/ulogin.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FPWebModuleLogin"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="uLogin"/>
       </Unit>
@@ -110,8 +111,42 @@
         <Filename Value="src/ufavicon.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FPWebModuleFavIcon"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="uFavIcon"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/other/ucookies.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uCookies"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/other/uwpsinterpreter.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uWPSInterpreter"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/other/ungitjsondataset.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uNGITJsonDataSet"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/other/usmartdebuglog.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uSmartDebugLog"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/other/db/udbabstract.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uDbAbstract"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src/uguardianendpoint.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="GuardianEndPoint"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="uGuardianEndPoint"/>
       </Unit>
     </Units>
   </ProjectOptions>
@@ -122,12 +157,17 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="src;src/other;src/other/jwt_unit"/>
+      <OtherUnitFiles Value="src;src/other;src/other/jwt_unit;src/other/db"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Other>
       <CustomOptions Value="-dUseCThreads
-//-dActiveSSL"/>
+//-dActiveSSL
+//-dSmartDebugLogWriteActive
+-dSmartDebugLogActive
+-dViewDataFromDataBase
+-dFirebirdConn
+//-dBuildCGI"/>
     </Other>
   </CompilerOptions>
   <Debugging>
@@ -140,6 +180,12 @@
       </Item>
       <Item>
         <Name Value="EFOpenError"/>
+      </Item>
+      <Item>
+        <Name Value="EResNotFound"/>
+      </Item>
+      <Item>
+        <Name Value="EHTTPRoute"/>
       </Item>
     </Exceptions>
   </Debugging>

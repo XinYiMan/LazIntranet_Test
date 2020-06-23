@@ -5,25 +5,23 @@ unit uGetToken;
 interface
 
 uses
-  Classes, SysUtils, HTTPDefs;
+  Classes, SysUtils, HTTPDefs, uCookies;
 
   function GetToken(ARequest: TRequest) : string;
   procedure SetToken(AResponse: TResponse; mytoken : string);
 
 implementation
+uses
+    uSmartDebugLog;
 
 function GetToken(ARequest: TRequest): string;
 begin
-     result := ARequest.CookieFields.values['mytoken'];
+     result := GetCookie(ARequest, 'mytoken');
 end;
 
 procedure SetToken(AResponse: TResponse; mytoken : string);
-var
-   C : TCookie;
 begin
-     C      := AResponse.Cookies.Add;
-     C.Name := 'mytoken';
-     C.Value := mytoken;
+     SetCookie(AResponse, 'mytoken', mytoken);
 end;
 
 end.

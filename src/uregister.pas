@@ -15,7 +15,7 @@ type
     procedure indexRequest(Sender: TObject; ARequest: TRequest;
       AResponse: TResponse; var Handled: Boolean);
   private
-         procedure OnBodyLoad(AResponse: TResponse; mytoken: string);
+         procedure OnBodyLoad(ARequest: TRequest; AResponse: TResponse; mytoken: string);
   public
 
   end;
@@ -25,7 +25,7 @@ var
 
 implementation
 uses
-    NGIT_Crypto_JWT, uVerifiedJWT, uGetToken;
+    NGIT_Crypto_JWT, uVerifiedJWT, uGetToken, uSmartDebugLog;
 
 {$R *.lfm}
 
@@ -57,17 +57,17 @@ begin
 
      if valid_token then
      begin
-          AResponse.SendRedirect('index');
+          AResponse.SendRedirect('/index');
      end else begin
               AResponse.Contents.LoadFromFile(ExtractFilePath(ParamStr(0)) + 'HTML' + System.DirectorySeparator + 'register.html');
-              OnBodyLoad(AResponse, mytoken);
+              OnBodyLoad(ARequest,AResponse, mytoken);
      end;
 
      Handled            := true;
 end;
 
-procedure TFPWebModuleRegister.OnBodyLoad(AResponse: TResponse; mytoken: string
-  );
+procedure TFPWebModuleRegister.OnBodyLoad(ARequest: TRequest;
+  AResponse: TResponse; mytoken: string);
 begin
 
 end;

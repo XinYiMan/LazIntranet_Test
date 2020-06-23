@@ -19,6 +19,8 @@ type
     end;
 
 implementation
+uses
+    uSmartDebugLog;
 
 { TCustomGetModule }
 
@@ -37,7 +39,7 @@ procedure TCustomGetModule.MyGetModule(Sender: TObject; ARequest: TRequest;
 var
   filename : string;
 begin
-     writeln('TCustomGetModule: ' + ARequest.URI);
+     SmartDebugLog.write(Self.UnitName,Self.ClassName,{$I %CURRENTROUTINE%},'TCustomGetModule: ' + ARequest.URI);
 end;
 
 

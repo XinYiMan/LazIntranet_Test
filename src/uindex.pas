@@ -17,7 +17,7 @@ type
     procedure set_item_todolistRequest(Sender: TObject; ARequest: TRequest;
       AResponse: TResponse; var Handled: Boolean);
   private
-         procedure OnBodyLoad(AResponse: TResponse; mytoken: string);
+         procedure OnBodyLoad(ARequest: TRequest; AResponse: TResponse; mytoken: string);
   public
 
   end;
@@ -27,7 +27,7 @@ var
 
 implementation
 uses
-    NGIT_Crypto_JWT, uVerifiedJWT, uGetToken, fpjson;
+    NGIT_Crypto_JWT, uVerifiedJWT, uGetToken, fpjson, uSmartDebugLog;
 
 {$R *.lfm}
 
@@ -66,9 +66,10 @@ begin
      begin
           SetToken(AResponse, mytoken);
           AResponse.Contents.LoadFromFile(ExtractFilePath(ParamStr(0)) + 'HTML' + System.DirectorySeparator + 'index.html');
-          OnBodyLoad(AResponse, mytoken);
+          OnBodyLoad(ARequest ,AResponse, mytoken);
      end else begin
-          AResponse.SendRedirect('login');
+          SetToken(AResponse, '');
+          AResponse.SendRedirect('/login');
      end;
 
      Handled            := true;
@@ -117,6 +118,7 @@ begin
           description := 'valid token';
 
      end else begin
+         SetToken(AResponse,'');
          code           := -1;
          description    := 'Invalid token';
      end;
@@ -132,7 +134,8 @@ begin
      Handled := true;
 end;
 
-procedure TFPWebModuleIndex.OnBodyLoad(AResponse: TResponse; mytoken: string);
+procedure TFPWebModuleIndex.OnBodyLoad(ARequest: TRequest;
+  AResponse: TResponse; mytoken: string);
 begin
      SetToken(AResponse, mytoken);
 end;

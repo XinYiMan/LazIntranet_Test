@@ -6,10 +6,16 @@ object FPWebModuleProfile: TFPWebModuleProfile
       Default = True
       OnRequest = indexRequest
       Template.AllowTagParams = False
+    end  
+    item
+      Name = 'upload_file'
+      Default = False
+      OnRequest = upload_fileRequest
+      Template.AllowTagParams = False
     end>
   CreateSession = False
   Height = 150
-  HorizontalOffset = 250
-  VerticalOffset = 130
+  HorizontalOffset = 654
+  VerticalOffset = 313
   Width = 150
 end

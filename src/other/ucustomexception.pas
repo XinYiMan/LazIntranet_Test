@@ -5,7 +5,7 @@ unit uCustomException;
 interface
 
 uses
-  Classes, SysUtils;
+  Classes, SysUtils, uSmartDebugLog;
 
 type
 
@@ -33,7 +33,7 @@ end;
 
 procedure TCustomException.MyException(Sender: TObject; E: Exception);
 begin
-     writeln('TCustomException: ' + E.Message);
+     SmartDebugLog.write(Self.UnitName,Self.ClassName,{$I %CURRENTROUTINE%},'TCustomException: ' + E.Message);
 end;
 
 end.

@@ -1,4 +1,4 @@
-unit uLogOut;
+unit uGuardianEndPoint;
 
 {$mode objfpc}{$H+}
 
@@ -9,9 +9,9 @@ uses
 
 type
 
-  { TFPWebModuleLogOut }
+  { TGuardianEndPoint }
 
-  TFPWebModuleLogOut = class(TFPWebModule)
+  TGuardianEndPoint = class(TFPWebModule)
     procedure indexRequest(Sender: TObject; ARequest: TRequest;
       AResponse: TResponse; var Handled: Boolean);
   private
@@ -21,21 +21,19 @@ type
   end;
 
 var
-  FPWebModuleLogOut: TFPWebModuleLogOut;
+  GuardianEndPoint: TGuardianEndPoint;
 
 implementation
-uses
-    uGetToken, uSmartDebugLog;
 
 {$R *.lfm}
 
-{ TFPWebModuleLogOut }
+{ TGuardianEndPoint }
 
-procedure TFPWebModuleLogOut.indexRequest(Sender: TObject; ARequest: TRequest;
+procedure TGuardianEndPoint.indexRequest(Sender: TObject; ARequest: TRequest;
   AResponse: TResponse; var Handled: Boolean);
 begin
-     SetToken(AResponse,'');
-     AResponse.SendRedirect('/login');
+     AResponse.Contents.Text:='{"status" : "active"}';
+     AResponse.ContentType := 'text/json; charset=utf-8';
 
      Handled := true;
 end;

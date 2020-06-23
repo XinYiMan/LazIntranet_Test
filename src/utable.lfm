@@ -6,6 +6,12 @@ object FPWebModuleTable: TFPWebModuleTable
       Default = True
       OnRequest = indexRequest
       Template.AllowTagParams = False
+    end  
+    item
+      Name = 'load_data_table'
+      Default = False
+      OnRequest = load_data_tableRequest
+      Template.AllowTagParams = False
     end>
   CreateSession = False
   Height = 150
