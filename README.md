@@ -17,3 +17,7 @@ Se la compilazione va a buon fine, lanciate l'eseguibile creato e aprite il link
 Al login usare le credenziali
 user: root@root.com
 password: toor 
+
+
+Il progetto è corredato da un sottoprogetto chiamato "guardian_endpoints" che verifica se un endpoint è attivo, altrimenti riavvia l'eseguibile associato a tale endpoint. Questo perchè l'http server embedded potrebbe crashare e "guardian_endpoints" lo riavvierebbe automaticamente. 
+"guardian_endpoints" si appoggia al file di configurazione config.ini per funzionare.
